@@ -5,7 +5,7 @@
 <p>Git clone the file or downlaod and extract it to a "checkoffs" directory. Make sure you have the latest version of python installed. Copy the "checkoffs.sh" into your home folder.</p>
 <h2>Run</h2>
 <p>To run this application, open a terminal (command prompt) window and type:</p>
-./checkoffs.sh
+sudo bash ./checkoffs.sh
 <h1>Known Issues</h1>
 <h3>Duplication</h3>
 <p>If you add a task, your existing tasks will duplicate</p>
