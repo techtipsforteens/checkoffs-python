@@ -7,7 +7,7 @@
 <p>To run this application, open a terminal (command prompt) window and type:</p>
 ./checkoffs.sh
 <h1>Known Issues</h1>
-<h2>Duplication<h2>
+<h3>Duplication</h3>
 <p>If you add a task, your existing tasks will duplicate</p>
-<h2>Removing and Completing Tasks</h2>
+<h3>Removing and Completing Tasks</h3>
 <p>These are currently under developement.</p>
