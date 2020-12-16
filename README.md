@@ -1,3 +1,4 @@
-#checkoffs
-
-Thank you to guizero for the moudle essential for creating the gui for this app.
+<Doctype! html>
+<head><title>Checkoffs</title></head>
+<body>
+  <h1>Instalation</h1>
