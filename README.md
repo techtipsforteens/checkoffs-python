@@ -6,6 +6,7 @@
 <h2>Run</h2>
 <p>To run this application on Linux, open a terminal (command prompt) window and type:</p>
 sudo bash ./checkoffs.sh
+
 <p>To run it on windows, rename "checkoffs.sh" to "checkoffs.bat" and double click it when you want to run it.</p>
 <h1>Known Issues</h1>
 <h3>Duplication</h3>
