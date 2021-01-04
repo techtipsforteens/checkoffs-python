@@ -9,7 +9,5 @@
 <br>
 <p>To run it on windows, rename "checkoffs.sh" to "checkoffs.bat" and double click it when you want to run it.</p>
 <h1>Known Issues</h1>
-<h3>Duplication</h3>
-<p>If you add a task, your existing tasks will duplicate</p>
 <h3>Removing and Completing Tasks</h3>
 <p>These are currently under developement.</p>
