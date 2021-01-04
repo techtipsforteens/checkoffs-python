@@ -1,3 +1,20 @@
+# ***Checkoffs Version 1.1***
+#
+# UPDATE HISTORY
+#
+# 1.1
+# Fixes
+# - Fixed duplication bug
+# - Made code more compact
+# Known Issues
+# - Remove task function not developed
+# - Remove task function executed every time showtasks() is used
+#
+# 1.0
+# Known Issues
+# - All tasks duplicate when a new one is created (fixed in 1.1)
+# - Remove task function not debeloped
+
 #Imports
 from guizero import App, Text, PushButton, Box, MenuBar
 import time
@@ -147,37 +164,6 @@ def addtask():
     global tt8
     global tt9
     global tt10
-#    bt1.hide()
-#    bt2.hide()
-#    bt3.hide()
-#    bt4.hide()
-#    bt5.hide()
-#    bt6.hide()
-#    bt7.hide()
-#    bt8.hide()
-#    bt9.hide()
-#    bt10.hide()
-#    tt1.hide()
-#    tt2.hide()
-#    tt3.hide()
-#    tt4.hide()
-#    tt5.hide()
-#    tt6.hide()
-#    tt7.hide()
-#    tt8.hide()
-#    tt9.hide()
-#    tt10.hide()
-#    ct1.hide()
-#    ct2.hide()
-#    ct3.hide()
-#    ct4.hide()
-#    ct5.hide()
-#    ct6.hide()
-#    ct7.hide()
-#    ct8.hide()
-#    ct9.hide()
-#    ct10.hide()
-    
     taskname = app.question("Add Task", "What task would you like to add?")
     tasknumber = app.question("Add Task", "Which task should this be? You can choose tasks 1-10.")
     taskpriority = app.yesno("Add Task", "Would you like this task to be priority?")
@@ -247,82 +233,38 @@ def addtask():
             t10p = 0
         else:
             app.error("Error", "Invalid Input")
-    if tfilter == [10, "pall"]:
-        bt1 = Box(app, layout = "grid")
-        if t1 != "":
-            tt1 = Text(bt1, text = t1, grid = [1,0])
-            if t1p == 0:
-                ct1 = PushButton(bt1, text = "✓", grid = [0,0])
-            else:
-                ct1 = PushButton(bt1, text = "P", grid = [0,0])
-        bt2 = Box(app, layout = "grid")
-        if t2 != "":
-            tt2 = Text(bt2, text = t2, grid = [1,0])
-            if t2p == 0:
-                ct2 = PushButton(bt2, text = "✓", grid = [0,0])
-            else:
-                ct2 = PushButton(bt2, text = "P", grid = [0,0])
-        bt3 = Box(app, layout = "grid")
-        if t3 != "":
-            tt3 = Text(bt3, text = t3, grid = [1,0])
-            if t3p == 0:
-                ct3 = PushButton(bt3, text = "✓", grid = [0,0])
-            else:
-                ct3 = PushButton(bt3, text = "P", grid = [0,0])
-        bt4 = Box(app, layout = "grid")
-        if t4 != "":
-            tt4 = Text(bt4, text = t4, grid = [1,0])
-            if t4p == 0:
-                ct4 = PushButton(bt4, text = "✓", grid = [0,0])
-            else:
-                ct4 = PushButton(bt4, text = "P", grid = [0,0])
-        bt5 = Box(app, layout = "grid")
-        if t5 != "":
-            tt5 = Text(bt5, text = t5, grid = [1,0])
-            if t5p == 0:
-                ct5 = PushButton(bt5, text = "✓", grid = [0,0])
-            else:
-                ct5 = PushButton(bt5, text = "P", grid = [0,0])
-        bt6 = Box(app, layout = "grid")
-        if t6 != "":
-            tt6 = Text(bt6, text = t6, grid = [1,0])
-            if t6p == 0:
-                ct6 = PushButton(bt6, text = "✓", grid = [0,0])
-            else:
-                ct6 = PushButton(bt6, text = "P", grid = [0,0])
-        bt7 = Box(app, layout = "grid")
-        if t7 != "":
-            tt7 = Text(bt7, text = t7, grid = [1,0])
-            if t7p == 0:
-                ct7 = PushButton(bt7, text = "✓", grid = [0,0])
-            else:
-                ct7 = PushButton(bt7, text = "P", grid = [0,0])
-        bt8 = Box(app, layout = "grid")
-        if t8 != "":
-            tt8 = Text(bt8, text = t8, grid = [1,0])
-            if t8p == 0:
-                ct8 = PushButton(bt8, text = "✓", grid = [0,0])
-            else:
-                ct8 = PushButton(bt8, text = "P", grid = [0,0])
-        bt9 = Box(app, layout = "grid")
-        if t9 != "":
-            tt9 = Text(bt9, text = t9, grid = [1,0])
-            if t9p == 0:
-                ct9 = PushButton(bt9, text = "✓", grid = [0,0])
-            else:
-                ct9 = PushButton(bt9, text = "P", grid = [0,0])
-        bt10 = Box(app, layout = "grid")
-        if t10 != "":
-            tt10 = Text(bt10, text = t10, grid = [1,0])
-            if t10p == 0:
-                ct10 = PushButton(bt10, text = "✓", grid = [0,0])
-            else:
-                ct10 = PushButton(bt10, text = "P", grid = [0,0])
+    showtasks()
+
 def remove_function():
     print("Tasks removed")
+def removetask1():
+    print("Remove Task 1")
+def removetask2():
+    print("Remove Task")
+def removetask3():
+    print("Remove Task")
+def removetask4():
+    print("Remove Task")
+def removetask5():
+    print("Remove Task")
+def removetask6():
+    print("Remove Task")
+def removetask7():
+    print("Remove Task")
+def removetask8():
+    print("Remove Task")
+def removetask9():
+    print("Remove Task")
+def removetask10():
+    print("Remove Task")
 def showtasks():
 #tfilter = [number of tasks, priority of tasks]
 #priority of tasks = pall (all priorities), p1 (priority 1), or p0 (priority 0)
+    global app
+    global titletext
+    global menubar
+    global tfilter
+    global buttonbox
     global t1
     global t2
     global t3
@@ -373,124 +315,11 @@ def showtasks():
     global tt8
     global tt9
     global tt10
-#    bt1.hide()
-#    bt2.hide()
-#    bt3.hide()
-#    bt4.hide()
-#    bt5.hide()
-#    bt6.hide()
-#    bt7.hide()
-#    bt8.hide()
-#    bt9.hide()
-#    bt10.hide()
-#    tt1.hide()
-#    tt2.hide()
-#    tt3.hide()
-#    tt4.hide()
-#    tt5.hide()
-#    tt6.hide()
-#    tt7.hide()
-#    tt8.hide()
-#    tt9.hide()
-#    tt10.hide()
-#    ct1.hide()
-#    ct2.hide()
-#    ct3.hide()
-#    ct4.hide()
-#    ct5.hide()
-#    ct6.hide()
-#    ct7.hide()
-#    ct8.hide()
-#    ct9.hide()
-#    ct10.hide()
-    if tfilter == [10, "pall"]:
-        bt1 = Box(app, layout = "grid")
-        if t1 != "":
-            tt1 = Text(bt1, text = t1, grid = [1,0])
-            if t1p == 0:
-                ct1 = PushButton(bt1, text = "✓", grid = [0,0])
-            else:
-                ct1 = PushButton(bt1, text = "P", grid = [0,0])
-        bt2 = Box(app, layout = "grid")
-        if t2 != "":
-            tt2 = Text(bt2, text = t2, grid = [1,0])
-            if t2p == 0:
-                ct2 = PushButton(bt2, text = "✓", grid = [0,0])
-            else:
-                ct2 = PushButton(bt2, text = "P", grid = [0,0])
-        bt3 = Box(app, layout = "grid")
-        if t3 != "":
-            tt3 = Text(bt3, text = t3, grid = [1,0])
-            if t3p == 0:
-                ct3 = PushButton(bt3, text = "✓", grid = [0,0])
-            else:
-                ct3 = PushButton(bt3, text = "P", grid = [0,0])
-        bt4 = Box(app, layout = "grid")
-        if t4 != "":
-            tt4 = Text(bt4, text = t4, grid = [1,0])
-            if t4p == 0:
-                ct4 = PushButton(bt4, text = "✓", grid = [0,0])
-            else:
-                ct4 = PushButton(bt4, text = "P", grid = [0,0])
-        bt5 = Box(app, layout = "grid")
-        if t5 != "":
-            tt5 = Text(bt5, text = t5, grid = [1,0])
-            if t5p == 0:
-                ct5 = PushButton(bt5, text = "✓", grid = [0,0])
-            else:
-                ct5 = PushButton(bt5, text = "P", grid = [0,0])
-        bt6 = Box(app, layout = "grid")
-        if t6 != "":
-            tt6 = Text(bt6, text = t6, grid = [1,0])
-            if t6p == 0:
-                ct6 = PushButton(bt6, text = "✓", grid = [0,0])
-            else:
-                ct6 = PushButton(bt6, text = "P", grid = [0,0])
-        bt7 = Box(app, layout = "grid")
-        if t7 != "":
-            tt7 = Text(bt7, text = t7, grid = [1,0])
-            if t7p == 0:
-                ct7 = PushButton(bt7, text = "✓", grid = [0,0])
-            else:
-                ct7 = PushButton(bt7, text = "P", grid = [0,0])
-        bt8 = Box(app, layout = "grid")
-        if t8 != "":
-            tt8 = Text(bt8, text = t8, grid = [1,0])
-            if t8p == 0:
-                ct8 = PushButton(bt8, text = "✓", grid = [0,0])
-            else:
-                ct8 = PushButton(bt8, text = "P", grid = [0,0])
-        bt9 = Box(app, layout = "grid")
-        if t9 != "":
-            tt9 = Text(bt9, text = t9, grid = [1,0])
-            if t9p == 0:
-                ct9 = PushButton(bt9, text = "✓", grid = [0,0])
-            else:
-                ct9 = PushButton(bt9, text = "P", grid = [0,0])
-        bt10 = Box(app, layout = "grid")
-        if t10 != "":
-            tt10 = Text(bt10, text = t10, grid = [1,0])
-            if t10p == 0:
-                ct10 = PushButton(bt10, text = "✓", grid = [0,0])
-            else:
-                ct10 = PushButton(bt10, text = "P", grid = [0,0])
-
-#Load App
-app= App("Checkoffs Alpha Test 1.0")
-app.bg = "#85C1E9"
-
-if app.yesno("Welcome", "Welcome to Checkoffs, have you used this app before?") == False:
-    name = app.question("Welcome", "What's your name?", initial_value=None)
-    app.info("Thanks!", "We would love your feedback!")
-    opened = "false"
-else:
-    opened = "true"
-    
-if opened == "false":
-    titletext = Text(app, text="Welcome to Checkoffs " + name + "!")
-else:
+    app.destroy()
+    app=App("Checkoffs")
+    app.bg = "#85C1E9"
     titletext = Text(app, text="Tasks")
-menubar = MenuBar(app,
+    menubar = MenuBar(app,
                   toplevel=["File", "Edit", "View", "Help"],
                   options=[
                       [ ["Export Tasks", export_function], ["Todoist", todoist_function], ["Quit", quit_function]],
@@ -498,8 +327,84 @@ menubar = MenuBar(app,
                       [ ["Sort Taks", sort_function] ],
                       [ ["About", about_function], ["Feedback", feedback_function] ],
                   ])
-buttonbox = Box(app, layout = "grid")
-tfilter = [10, "pall"]
+    buttonbox = Box(app, layout = "grid")
+    tfilter = [10, "pall"]
+    titletext.text_size = 25
+    
+    if tfilter == [10, "pall"]:
+        bt1 = Box(app, layout = "grid")
+        if t1 != "":
+            tt1 = Text(bt1, text = t1, grid = [1,0])
+            if t1p == 0:
+                ct1 = PushButton(bt1, text = "✓", grid = [0,0], command=removetask1())
+            else:
+                ct1 = PushButton(bt1, text = "P", grid = [0,0], command=removetask1())
+        bt2 = Box(app, layout = "grid")
+        if t2 != "":
+            tt2 = Text(bt2, text = t2, grid = [1,0])
+            if t2p == 0:
+                ct2 = PushButton(bt2, text = "✓", grid = [0,0], command=removetask2())
+            else:
+                ct2 = PushButton(bt2, text = "P", grid = [0,0], command=removetask2())
+        bt3 = Box(app, layout = "grid")
+        if t3 != "":
+            tt3 = Text(bt3, text = t3, grid = [1,0])
+            if t3p == 0:
+                ct3 = PushButton(bt3, text = "✓", grid = [0,0], command=removetask3())
+            else:
+                ct3 = PushButton(bt3, text = "P", grid = [0,0], command=removetask3())
+        bt4 = Box(app, layout = "grid")
+        if t4 != "":
+            tt4 = Text(bt4, text = t4, grid = [1,0])
+            if t4p == 0:
+                ct4 = PushButton(bt4, text = "✓", grid = [0,0], command=removetask4())
+            else:
+                ct4 = PushButton(bt4, text = "P", grid = [0,0], command=removetask4())
+        bt5 = Box(app, layout = "grid")
+        if t5 != "":
+            tt5 = Text(bt5, text = t5, grid = [1,0])
+            if t5p == 0:
+                ct5 = PushButton(bt5, text = "✓", grid = [0,0], command=removetask5())
+            else:
+                ct5 = PushButton(bt5, text = "P", grid = [0,0], command=removetask5())
+        bt6 = Box(app, layout = "grid")
+        if t6 != "":
+            tt6 = Text(bt6, text = t6, grid = [1,0])
+            if t6p == 0:
+                ct6 = PushButton(bt6, text = "✓", grid = [0,0], command=removetask6())
+            else:
+                ct6 = PushButton(bt6, text = "P", grid = [0,0], command=removetask6())
+        bt7 = Box(app, layout = "grid")
+        if t7 != "":
+            tt7 = Text(bt7, text = t7, grid = [1,0])
+            if t7p == 0:
+                ct7 = PushButton(bt7, text = "✓", grid = [0,0], command=removetask7())
+            else:
+                ct7 = PushButton(bt7, text = "P", grid = [0,0], command=removetask7())
+        bt8 = Box(app, layout = "grid")
+        if t8 != "":
+            tt8 = Text(bt8, text = t8, grid = [1,0])
+            if t8p == 0:
+                ct8 = PushButton(bt8, text = "✓", grid = [0,0], command=removetask8())
+            else:
+                ct8 = PushButton(bt8, text = "P", grid = [0,0], command=removetask8())
+        bt9 = Box(app, layout = "grid")
+        if t9 != "":
+            tt9 = Text(bt9, text = t9, grid = [1,0])
+            if t9p == 0:
+                ct9 = PushButton(bt9, text = "✓", grid = [0,0], command=removetask9())
+            else:
+                ct9 = PushButton(bt9, text = "P", grid = [0,0], command=removetask9())
+        bt10 = Box(app, layout = "grid")
+        if t10 != "":
+            tt10 = Text(bt10, text = t10, grid = [1,0])
+            if t10p == 0:
+                ct10 = PushButton(bt10, text = "✓", grid = [0,0], command=removetask10())
+            else:
+                ct10 = PushButton(bt10, text = "P", grid = [0,0], command=removetask10())
+
+#Load App
+app= App("Checkoffs")
+app.bg = "#85C1E9"
 showtasks()
-titletext.text_size = 25
 app.display()
